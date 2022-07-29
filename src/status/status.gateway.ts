@@ -6,7 +6,7 @@ export class StatusGateway {
 
   @WebSocketServer() wss: Server;
 
-  sendToAll(msg: any) {
+  sendToAll(msg) {
     this.wss.emit('transaction', { type: 'Transaction', data: msg });
   }
 }
