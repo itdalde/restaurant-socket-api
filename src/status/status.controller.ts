@@ -1,7 +1,7 @@
 import { Controller, Post, HttpCode, Body } from '@nestjs/common';
 import { StatusGateway } from './status.gateway';
 
-@Controller('alert')
+@Controller('status')
 export class StatusController {
 
     constructor(private statusGateway: StatusGateway) {}
