@@ -8,8 +8,8 @@ export class StatusController {
 
     @Post()
     @HttpCode(200)
-    sendAlertToAll(@Body() dto: { message: any }) {
-        this.statusGateway.sendToAll(dto.message);
+    sendAlertToAll(@Body() dto) {
+        this.statusGateway.sendToAll(dto);
         return dto;
     }
 }
