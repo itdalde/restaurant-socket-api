@@ -109,6 +109,7 @@
 
                 this.socket.alerts = io('http://reservegcc.com:3000/status');
                 this.socket.alerts.on('transaction', (msg) => {
+                    console.log(msg)
                     this.receiveAlertMessage(msg);
                 });
             }
