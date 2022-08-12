@@ -107,9 +107,8 @@
                     this.rooms[room] = false;
                 });
 
-                this.socket.alerts = io('http://reservegcc.com:3000/status');
-                this.socket.alerts.on('transaction', (msg) => {
-                    console.log(msg)
+                this.socket.status = io('http://reservegcc.com:3000/status');
+                this.socket.status.on('transaction', (msg) => {
                     this.receiveAlertMessage(msg);
                 });
             }
